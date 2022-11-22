@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>compra de tickets</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+  <style>
+    .bg-grey {
+      background-color: rgb(33, 34, 31);
+    }
+
+    .row {
+      margin-left: 25% !important;
+      margin-right: 25%;
+      margin-top: 2%;
+    }
+
+    .card {
+      margin-right: 1% !important;
+      height: 25vh;
+    }
+
+    .btn6 {
+
+      height: 1, 2cm;
+      background-color: yellowgreen;
+      color: white;
+      border: solid 2px white;
+      width: 50%;
+
+    }
+
+    .bg-green {
+      background-color: darkslategrey;
+
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <div class="container-fluid">
+    <header>
+      <nav class="navbar navbar-dark bg-grey">
+        <p class="navbar-brand"> Conf Bs As </p>
+
+
+
+
+        <ul class="nav justify-content-end">
+          <li class="nav-item">
+            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">La conferencia</a>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Los oradores</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">El lugar y la fecha</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="#" tabindex="-1" aria-disabled="true">Conviertete en orador</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-success" href="#" tabindex="-1" aria-disabled="true">Comprar tickets </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="row row-cols-1 row-cols-md-3" align="center">
+
+      <div class=" card border-primary card-body" style="max-width: 18rem;">
+        <h5 class="card-title"><strong>Estudiante</strong></h5>
+        <p class="card-text">Tienen un descuento</p>
+        <p class="card-text"><strong>80%</strong></p>
+        <p class="card-text"><small class="text-muted">*presentar documentación</small></p>
+      </div>
+
+
+
+      <div class="card border-info card-body" style="max-width: 18rem;">
+        <h5 class="card-title"><strong>Trainee</strong></h5>
+        <p class="card-text">Tienen un descuento</p>
+        <p class="card-text"><strong>50%</strong></p>
+        <p class="card-text"><small class="text-muted">*presentar documentación</small></p>
+      </div>
+
+
+      <div class="card border-warning card-body" style="max-width: 18rem;">
+        <h5 class="card-title"><strong>Junior</strong></h5>
+        <p class="card-text">Tienen un descuento</p>
+        <p class="card-text"><strong>15%</strong></p>
+        <p class="card-text"><small class="text-muted">*presentar documentación</small></p>
+      </div>
+
+    </div>
+
+    <h5 align="center">VENTA</h5>
+    <h2 align="center"><strong>VALOR DE TICKET $200</strong></h2>
+
+    <form>
+      <div class="row">
+        <div class="col">
+          <input type="text" class="form-control" placeholder="Nombre">
+        </div>
+        <div class="col">
+          <input type="text" class="form-control" placeholder="Apellido">
+        </div>
+
+        <div class="form-group ">
+          <label for="inputAddress"></label>
+          <input type="email" class="form-control" id="inputAddress" placeholder="Correo">
+        </div>
+
+
+
+        <div class="col">
+          <label>Cantidad</label>
+          <input id="cantidad" class="form-control" type="number" name="cantidad" placeholder="cantidad">
+        </div>
+        <div class="col">
+          <label>Categoria</label>
+          <input type="text" class="form-control" name="categoria" id="categoria" placeholder="categoria">
+
+        </div><br>
+
+        <br>
+        <br>
+        <span id="alerta" class="alert alert-primary" role="alert">
+          Total a pagar: $
+        </span>
+        <button type="button" class="btn btn6">Borrar</button>
+        <br>
+        <button onclick="clickear()" id="btn" type="submit" class="btn btn6">Resumen</button>
+
+
+
+
+      </div>
+    </form><br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <footer>
+      <nav class="navbar bg-green justify-content-center">
+
+        <ul class="nav justify-content-center">
+
+          <li class="nav-item">
+            <a class="nav-link text-white" href="#" tabindex="-1" aria-disabled="true"> Preguntas Frecuentes</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="#" tabindex="-1" aria-disabled="true">Contáctanos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="#" tabindex="-1" aria-disabled="true">Prensa</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="#" tabindex="-1" aria-disabled="true">Conferencias</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="#" tabindex="-1" aria-disabled="true">Terminos y Condiciones</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="#" tabindex="-1" aria-disabled="true">Privacidad</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="#" tabindex="-1" aria-disabled="true">Estudiantes</a>
+          </li>
+        </ul>
+
+      </nav>
+    </footer>
+
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+    crossorigin="anonymous"></script>
+  <script src="compraDeTickets.js"></script>
+
+</body>
+
+</html>
