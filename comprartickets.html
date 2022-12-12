@@ -22,6 +22,7 @@
     .card {
       margin-right: 1% !important;
       height: 25vh;
+      width: 20%;
     }
 
     .btn6 {
@@ -33,11 +34,32 @@
       width: 50%;
 
     }
+    #alerta{
+      height: 1,2cm;
+    }
 
     .bg-green {
       background-color: darkslategrey;
 
     }
+    @media screen and (max-width: 400px) {
+    .card{
+      margin-top: 1% !important;
+      height: 50%;
+      width: 50%;
+}
+.row{
+  margin-left: 10% !important;
+  margin-right: 10%;
+}
+    }
+    @media screen and (max-width: 1200px) {
+   
+.row{
+  margin-left: 10% !important;
+  margin-right: 10%;
+}
+    
   </style>
 
 </head>
@@ -73,9 +95,9 @@
       </nav>
     </header>
 
-    <div class="row row-cols-1 row-cols-md-3" align="center">
+    <div class="row" >
 
-      <div class=" card border-primary card-body" style="max-width: 18rem;">
+      <div class= "col-sm-4 card border-primary card-body" >
         <h5 class="card-title"><strong>Estudiante</strong></h5>
         <p class="card-text">Tienen un descuento</p>
         <p class="card-text"><strong>80%</strong></p>
@@ -84,7 +106,7 @@
 
 
 
-      <div class="card border-info card-body" style="max-width: 18rem;">
+      <div class="col-sm-4 card border-info card-body">
         <h5 class="card-title"><strong>Trainee</strong></h5>
         <p class="card-text">Tienen un descuento</p>
         <p class="card-text"><strong>50%</strong></p>
@@ -92,7 +114,7 @@
       </div>
 
 
-      <div class="card border-warning card-body" style="max-width: 18rem;">
+      <div class="col-sm-4 card border-warning card-body" >
         <h5 class="card-title"><strong>Junior</strong></h5>
         <p class="card-text">Tienen un descuento</p>
         <p class="card-text"><strong>15%</strong></p>
@@ -104,18 +126,18 @@
     <h5 align="center">VENTA</h5>
     <h2 align="center"><strong>VALOR DE TICKET $200</strong></h2>
 
-    <form>
+    <form id="formulario">
       <div class="row">
         <div class="col">
-          <input type="text" class="form-control" placeholder="Nombre">
+          <input id='nombre'type="text" class="form-control" placeholder="Nombre">
         </div>
         <div class="col">
-          <input type="text" class="form-control" placeholder="Apellido">
+          <input id='apellido' type="text" class="form-control" placeholder="Apellido">
         </div>
 
         <div class="form-group ">
           <label for="inputAddress"></label>
-          <input type="email" class="form-control" id="inputAddress" placeholder="Correo">
+          <input id='email' type="email" class="form-control" id="inputAddress" placeholder="Correo">
         </div>
 
 
@@ -132,13 +154,19 @@
 
         <br>
         <br>
-        <span id="alerta" class="alert alert-primary" role="alert">
-          Total a pagar: $
-        </span>
-        <button type="button" class="btn btn6">Borrar</button>
         <br>
-        <button onclick="clickear()" id="btn" type="submit" class="btn btn6">Resumen</button>
+        
+        <span id="alerta" class="col-12 alert alert-primary"  role="alert">
+         <p align="center" >Total a pagar: $ </p> 
+        </span>
+        <br>
+        <br>
+        <br>
 
+        <button   id="btn1" type="submit" class="btn btn6">Resumen</button>
+        <br>
+        <button id="btn2" type="reset" class="btn btn6">Borrar</button>
+       
 
 
 
