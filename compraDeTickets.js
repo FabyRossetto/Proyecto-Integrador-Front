@@ -23,30 +23,42 @@ const compra = document.getElementById('btn1').addEventListener('click', (evento
     let alerta = document.querySelector("span")
 
     for (let contador = 1; contador <= cantidad.value; contador++) {
-        if (categoria.value == "Estudiante") {
+        if (categoria.value == "Estudiante"||categoria.value == "estudiante") {
             var ValorEntrada = (EntradaGeneral - descuentoEs)
 
             console.log("El valor de cada entrada es " + ValorEntrada);
 
 
         }
-        if (categoria.value == "Trainee") {
+        if (categoria.value == "Trainee"||categoria.value == "trainee") {
             var ValorEntrada = (EntradaGeneral - descuentoTr)
             console.log("El valor cada entrada es " + ValorEntrada)
 
 
         }
-        if (categoria.value == "Junior") {
+        if (categoria.value == "Junior"||categoria.value == "junior") {
             var ValorEntrada = (EntradaGeneral - descuentoJr)
             console.log("El valor de cada entrada es " + ValorEntrada)
 
 
         }
-        if (categoria.value == "General") {
+        if (categoria.value == "General"||categoria.value == "general") {
             var ValorEntrada = EntradaGeneral
             console.log("El valor de cada entrada es " + EntradaGeneral)
 
 
+        }
+        else{
+            alerta.innerHTML = `
+        <div>
+            
+                <p align=center> Esa Categoria no existe</p>
+            
+        </div> 
+    `
+
+    }
+            
         }
 
 
