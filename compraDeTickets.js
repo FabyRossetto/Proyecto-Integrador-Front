@@ -42,27 +42,20 @@ const compra = document.getElementById('btn1').addEventListener('click', (evento
 
 
         }
-        if (categoria.value == "General"||categoria.value == "general") {
+        if (categoria.value == "General"||categoria.value == "general"|| categoria.value==null) {
             var ValorEntrada = EntradaGeneral
             console.log("El valor de cada entrada es " + EntradaGeneral)
 
 
         }
-        else{
-            alerta.innerHTML = `
-        <div>
+       
             
-                <p align=center> Esa Categoria no existe</p>
-            
-        </div> 
-    `
-
-    }
-            
-        }
+        
 
 
         total = total + ValorEntrada
+    }
+      
         alerta.innerHTML = `
         <div>
             
@@ -71,8 +64,9 @@ const compra = document.getElementById('btn1').addEventListener('click', (evento
         </div> 
     `
 
-    }
-
+    
+    
+    
     console.log("El total es" + total)
 
 
